@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.hr{
+width:70%;
+}
+body{
+background-color: #FE8E86;
+}
+
+#title{
+background-color: cyan;
+}
+
+.internal{
+background-color:yellow;
+}
+</style>
+
+
+<head>
+	
+	<title>ECG ARRHYTHMIA</title>
+
+</head>
+
+<body>
+		
+		<h1><mark id="title">ECG prediction</mark></h1>
+		
+		<hr class="hr">
+		
+		<p><b> Welcome to the prediction page of Arrhythmia ! </b></p>
+		
+		<form action ="/arrhythmia" method ="POST" enctype ="multipart/form-data">
+			<center><label for="imageUpload">Choose an ECG Image ... </label> <br>
+				<br>
+				<img src="../static/ecg_final.png" width="300" height="300" >
+				<br>
+				<input type ="file" name ="file" accept =".png, .jpg, .jpeg"> <br>
+				<br>
+				<input type = "submit" name= "submit"> <b>Predict!</b> </input>
+			</center>
+		</form>
+		
+		<br>
+		<hr class="hr">
+		
+		<h2><mark class="internal"> Results:</mark> </h2>
+
+			<center>
+			    <p><b> Prediction: {{y}} </b></p>
+			    <p><b> Predicted Index:{{z}} </b></p>
+			    <p><b> Model Accuracy:{{a}} </b></p>
+			    <p><b> Algorithm Used: {{u}} </b></p>
+			
+	      </center>
+	
+	<br>
+	<hr class="hr">
+
+	<h2><mark class="internal">Interpretation:</mark> </h2>
+	
+        	<center>
+            	<p><b> {{p}} </b></p>
+        	</center>
+    
+    <br>
+    <hr class="hr"> 
+    
+    <center>
+    	<p><b> Click on <mark>'About'</mark> Page to know more <mark>about disease and precautions!</mark> </b></p>
+    	<p><b>Click on <mark>'back arrow'</mark> to head to <mark>home</mark> page!</p></b>
+	</center>
+    
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	
+	<title>PNEUMONIA CLASSIFICATION</title>
+	<style>
+	.hr{
+	width:70%;
+	}
+	
+	body{
+	background-color:#add8e6;
+	}
+	
+	#title{
+	background-color: #ffc1cc;
+	}
+	</style>
+
+</head>
+
+<body>
+		
+		<h1><mark id="title">Pneumonia Classification from Chest X-Ray</mark></h1>
+		
+		<hr class="hr">
+		
+		<p><b> Welcome to the prediction page of Pneumonia ! </b></p>
+		
+		<form action ="/pneumonia" method ="POST" enctype ="multipart/form-data">
+			<center>
+			<label for="imageUpload">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Choose a chest x-ray...</label><br><br>
+			<img src="../static/pneumonia_final.jpg" width="400" height="200" ><br><br>
+				<input type ="file" name ="file2" accept =".png, .jpg, .jpeg"> <br><br>
+
+				<input type = "submit" name= "submit"><b> Predict! </b></input>
+			</center>
+		</form>
+
+		<br>
+		<hr class="hr">
+		
+		<h2><mark class="internal"> Results:</mark> </h2>
+
+			<center>
+			    <p><b> Prediction: {{y}} </b></p>
+			    <p><b> Predicted Index:{{z}} </b></p>
+			    <p><b> Model Accuracy:{{a}} </b></p>
+			    <p><b> Algorithm Used: {{u}} </b></p>
+			
+	      </center>
+	
+	<br>
+	<hr class="hr">
+
+	<h2><mark class="internal">Interpretation:</mark> </h2>
+	
+        	<center>
+            	<p><b> {{p}} </b></p>
+        	</center>
+    
+    <br>
+    <hr class="hr"> 
+    
+    <center>
+    	<p><b> Click on <mark>'About'</mark> Page to know more <mark>about disease and precautions!</mark> </b></p>
+    	<p><b>Click on <mark>'back arrow'</mark> to head to <mark>home</mark> page!</p></b>
+	</center>
+    
+</body>
+</html>

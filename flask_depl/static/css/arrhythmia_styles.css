@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+
+
+.heart-img{
+	position: fixed;
+	left: 90%;
+	padding: 25px;
+	animation: 1s infinite heartbeat;
+	z-index: 1;
+}
+
+
+.predict{
+	background-image: url("../bg2.jpg") ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+
+ul{
+	display: flex;
+	list-style: none;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+li{
+	padding: 20px 40px 20px 0px;
+	font-size: 30px;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+button{
+	border-radius: 20px;
+}
+
+.choose-btn{
+	padding: 20px;
+	background-color: green;
+	height: 40px;
+	width: 100px;
+	outline: none;
+	border: none;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+.predict-btn{
+	padding: 20px;
+	background-color: dodgerblue;
+	height: 40px;
+	width: 100px;
+	outline: none;
+	border: none;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+.btn-text{
+	font-size: 20px;
+}
+
+.box{
+	height: 300px;
+	width: 300px;
+	margin: 20px;
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+@keyframes heartbeat {
+	0% {
+		transform: scale(1.0);
+	}
+
+	25%{
+		transform: scale(1.2);
+	}
+	40%{
+		transform: scale(1.0);
+	} 
+	60%{
+		transform: scale(1.2);
+	} 
+
+	100%{
+		transform: scale(1.0);
+	}
+}
+.img-preview {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    border: 5px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 1em;
+    margin-bottom: 1em;    
+}
+
+.img-preview>div {
+    width: 100%;
+    height: 100%;
+    background-size: 256px 256px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-label{
+    display: inline-block;
+    padding: 12px 30px;
+    background: #39D2B4;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.upload-label:hover{
+    background: #34495E;
+    color: #39D2B4;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}

@@ -1,0 +1,129 @@
+<html>
+
+    <head>
+        <title> LIVER DISEASE PREDICTOR PAGE </title>
+        <style>
+        .hr{
+        width:70%;
+        }
+        
+        body{
+        background-color:#806167;
+        }
+        
+        #center{
+        position:relative;
+        margin-left:580;
+        }
+        
+        #title{
+        background-color :#91ddf2;
+        }
+        
+        mark{
+        background-color:#ccff00;
+        }
+        </style>
+    </head>
+    
+    <body>
+    
+    <h1><mark id="title">Liver Disease Prediction</mark></h1>
+    <hr class="hr">
+    
+    <p><b> Welcome to the prediction page of Liver Disease!</b></p>
+    <p> <b> Pls enter the following details : </b> </p>
+    <br>
+    <img id="center" src="../static/liver_final.png" width="200" height="200"><br>
+    
+    <form action="/liver" method="POST">
+    
+    <table border="0" align="center">
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><label for="asp">Asp_Amino: </label></td>
+            <td><input id="asp" maxlength="50" name="asp" placeholder="Ex: (10.00-4929.00)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="ala">Ala Amino: </label></td>
+            <td><input id="ala" maxlength="50" name="ala" placeholder="(10.00-2000.00)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="alk">Alk phosphate: </label></td>
+            <td><input id="alk" maxlength="50" name="alk" placeholder="(63.00-2110.00)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="tot_bil">Totl Bil: </label></td>
+            <td><input id="tot_bil" maxlength="50" name="tot_bil" placeholder="(0.40-75.00)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="alb">Alb: </label></td>
+            <td><input id="alb" maxlength="50" name="alb" placeholder="(0.90-5.50)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="direct_bil">Direct Bil:</label></td>
+            <td><input id="direct_bil" maxlength="50" name="direct_bil" placeholder="(0.10-19.70)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="alb_glo">Alb_Glo_Ratio:</label></td>
+            <td><input id="alb_glo" maxlength="50" name="alb_glo" placeholder="(0.30-2.80)" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="tot_pro">Tot Proteins:</label></td>
+            <td><input id="tot_pro"" maxlength="50" name="tot_pro" placeholder="(2.70-9.60)" type="text"  /></td>
+        </tr>
+      
+ 
+
+        <tr>
+            <td align="right"><input name="Submit" type="Submit" value="prediction" /></td>
+        </tr>
+        
+    </tbody>
+</table>
+    </form>
+    
+    <br>
+    <hr class="hr">
+    
+    
+    <h2><mark class="internal"> Results: </mark></h2>
+
+        <center>
+           <p><b> Prediction: {{y}} </b></p>
+           <p><b> Predicted Index:{{z}} </b></p>
+           <p><b> Model Accuracy:{{a}} </b></p>
+           <p><b> Algorithm Used: {{u}} </b></p>
+        
+       </center>
+       
+      <br>
+  	<hr class="hr">
+
+  	<h2><mark class="internal">Interpretation:</mark> </h2>
+  	
+          	<center>
+              	<p><b> {{p}} </b></p>
+          	</center>
+      
+      <br>
+      <hr class="hr"> 
+      
+      <center>
+      	<p><b> Click on <mark>'About'</mark> Page to know more <mark>about disease and precautions!</mark> </b></p>
+      	<p><b>Click on <mark>'back arrow'</mark> to head to <mark>home</mark> page!</p></b>
+  	</center>
+    
+    </body>
+</html>

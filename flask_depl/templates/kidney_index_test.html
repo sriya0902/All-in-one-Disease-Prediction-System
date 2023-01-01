@@ -1,0 +1,126 @@
+<html>
+
+    <head>
+        <title> CHRONIC KIDNEY DISEASE PREDICTOR PAGE </title>
+        <style>
+        .hr{
+        width:70%;
+        }
+        
+        body{
+        background-color: #a08679;
+        }
+        
+        #center{
+        position:relative;
+        margin-left:590;
+        }
+        
+        #title{
+        background-color:#1AC758;
+        }
+        </style>
+    </head>
+    
+    <body>
+    
+     <h1><mark id="title">Chronic Kidney Disease Prediction</mark></h1>
+     <hr class="hr">
+     
+     <p><b> Welcome to the prediction page of Chronic Kidney Disease!</b></p>
+     <p> <b> Pls enter the following details : </b> </p>
+     <br>
+     <img id="center" src="../static/kidney_final.jpg" width="200" height="200"></img>
+    
+    <form action="/ckd" method="POST">
+    
+    <table border="0" align="center">
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><label for="sg">Sg: </label></td>
+            <td><input id="sg" maxlength="50" name="sg" placeholder="Ex: (1.005,1.010,1.015,1.020,1.025)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="htn">Htn: </label></td>
+            <td><input id="htn" maxlength="50" name="htn" placeholder="Yes = 1, No=0" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="hemo">Hemo: </label></td>
+            <td><input id="hemo" maxlength="50" name="hemo" placeholder="in gms" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="dm">Dm: </label></td>
+            <td><input id="dm" maxlength="50" name="dm" placeholder="Yes = 1, No=0" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="al">Al: </label></td>
+            <td><input id="al" maxlength="50" name="al" placeholder="(0,1,2,3,4,5)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="appet">Appet:</label></td>
+            <td><input id="appet" maxlength="50" name="appet" placeholder="Good = 1, Poor = 0" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="rc">Rc:</label></td>
+            <td><input id="rc" maxlength="50" name="rc" placeholder="in Millions/cmm" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="pc">Pc:</label></td>
+            <td><input id="pc"" maxlength="50" name="pc" placeholder="Normal = 0, Abnormal = 1" type="text"  /></td>
+        </tr>
+      
+ 
+
+        <tr>
+            <td></td>
+            <td>&nbsp;&nbsp;&nbsp;<input name="Submit" type="Submit" value="prediction" /></td>
+        </tr>
+        
+    </tbody>
+</table>
+    </form>
+    
+    <br>
+    <hr class="hr">
+    
+    
+    <h2><mark class="internal"> Results: </mark></h2>
+
+        <center>
+           <p><b> Prediction: {{y}} </b></p>
+           <p><b> Predicted Index:{{z}} </b></p>
+           <p><b> Model Accuracy:{{a}} </b></p>
+           <p><b> Algorithm Used: {{u}} </b></p>
+        
+       </center>
+       
+      <br>
+  	<hr class="hr">
+
+  	<h2><mark class="internal">Interpretation:</mark> </h2>
+  	
+          	<center>
+              	<p><b> {{p}} </b></p>
+          	</center>
+      
+      <br>
+      <hr class="hr"> 
+      
+      <center>
+      	<p><b> Click on <mark>'About'</mark> Page to know more <mark>about disease and precautions!</mark> </b></p>
+      	<p><b>Click on <mark>'back arrow'</mark> to head to <mark>home</mark> page!</p></b>
+  	</center>
+    
+    </body>
+</html>

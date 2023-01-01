@@ -1,0 +1,125 @@
+<html>
+
+    <head>
+        <title> DIABETES PREDICTOR TEST PAGE </title>
+        <style>
+        body{
+        background-color: #accbff;
+        }
+        .hr{
+        width:70%;
+        }
+        
+        #img{
+        position:relative;
+        margin-left:550;
+        }
+        
+        #title{
+        background-color:#FF759F;
+        }
+        
+       
+        </style>
+    </head>
+    
+    <body>
+    
+    <h1><mark id="title">Diabetes Prediction</mark></h1>
+    <hr class="hr">
+    
+    <p><b> Welcome to the prediction page of Diabetes!</b></p>
+    <p> <b> Pls enter the following details : </b> </p>
+    <br>
+    <img src="../static/diabetes_final.jpg" width="200" height="200" id="img" />
+    <form action="/diabetes" method="POST">
+    
+    <table border="0" align="center">
+    <tbody>
+        <tr>
+        <td></td>
+        <td></td>
+        </tr>
+
+        <tr>
+            <td><label for="preg">No of Pregnancies: </label></td>
+            <td><input id="preg" maxlength="50" name="preg" placeholder="Ex: (0-17)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="glucose">Glucose: </label></td>
+            <td><input id="glucose" maxlength="50" name="glucose" placeholder="(0.00-199.00)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="bp">BP: </label></td>
+            <td><input id="bp" maxlength="50" name="bp" placeholder="(0.00-122.00)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="skin">Skin Thickness: </label></td>
+            <td><input id="skin" maxlength="50" name="skin" placeholder="(0.00-99.00)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="insulin">Insulin: </label></td>
+            <td><input id="insulin" maxlength="50" name="insulin" placeholder="(0.00-846.00)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="bmi">BMI:</label></td>
+            <td><input id="bmi" maxlength="50" name="bmi" placeholder="(0.00-67.10)" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="dia_ped_func">Diabetes Pedigree Function:</label></td>
+            <td><input id="dia_ped_func" maxlength="50" name="dia_ped_func" placeholder="(0.07-2.42)" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="age">Age:</label></td>
+            <td><input id="age" maxlength="50" name="age" placeholder="(21-81)" type="text"  /></td>
+        </tr>
+      
+ 
+
+        <tr>
+            <td align="right"><input name="Submit" type="Submit" value="prediction" /></td>
+        </tr>
+        
+    </tbody>
+</table>
+    </form>
+    
+   
+    <br>
+    <hr  class="hr">
+    
+    
+    <h2><mark class="internal"> Results:</mark> </h2>
+
+        <center>
+           <p><b> Prediction: {{y}} </b></p>
+           <p><b> Predicted Index:{{z}} </b></p>
+           <p><b> Model Accuracy:{{a}} </b></p>
+           <p><b> Algorithm Used: {{u}} </b></p>
+        
+       </center>
+       
+      <br>
+  	<hr  class="hr">
+
+  	<h2><mark class="internal">Interpretation:</mark> </h2>
+  	
+          	<center>
+              	<p><b> {{p}} </b></p>
+          	</center>
+      
+      <br>
+      <hr  class="hr"> 
+      
+      <center>
+      	<p><b> Click on <mark>'About'</mark> Page to know more <mark>about disease and precautions!</mark> </b></p>
+      	<p><b>Click on <mark>'back arrow'</mark> to head to <mark>home</mark> page!</p></b>
+  	</center>
+    </body>
+</html>

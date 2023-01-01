@@ -1,0 +1,229 @@
+<html>
+
+    <head>
+        <title> CANCER PREDICTOR PAGE </title>
+        <style>
+        body{
+        background-color:#ffcece;
+        }
+        
+        .hr{
+        width:70%;
+        }
+        
+        #center{
+        positive:relative;
+        margin-left:550;
+        }
+        
+        #title{
+        background-color:#0DFFBB ;
+        }
+        </style>
+    </head>
+    
+    <body>
+    
+    
+    <h1><mark id="title">Breast Cancer Prediction</title></h1>
+    <hr class="hr">
+    
+    <p><b> Welcome to the prediction page of Breast Cancer!</b></p>
+    <p> <b> Pls enter the following details : </b> </p>
+    <br>
+    
+    <img src="../static/cancer_final.jpg" width="200" height="200" id="center"/>
+    <form action="/cancer" method="POST">
+    
+    <table border="0" align="center">
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><label for="Radius_mean">Radius_mean: </label></td>
+            <td><input id="Radius_mean" maxlength="50" name="Radius_mean" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="Texture_mean">Texture_mean: </label></td>
+            <td><input id="Texture_mean" maxlength="50" name="Texture_mean" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="Perimeter_mean">Perimeter_mean: </label></td>
+            <td><input id="Perimeter_mean" maxlength="50" name="Perimeter_mean" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="Area-mean">Area-mean: </label></td>
+            <td><input id="Area-mean" maxlength="50" name="Area-mean" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="Smoothness_mean">Smoothness_mean: </label></td>
+            <td><input id="Smoothness_mean" maxlength="50" name="Smoothness_mean" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="Compactness_mean">Compactness_mean:</label></td>
+            <td><input id="Compactness_mean" maxlength="50" name="Compactness_mean" type="text" /></td>
+        </tr>
+
+        <tr>
+            <td><label for="Concavity_mean">Pcc:</label></td>
+            <td><input id="Concavity_mean" maxlength="50" name="Concavity_mean" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Concave points_mean">Concave points_mean":</label></td>
+            <td><input id="Concave points_mean"" maxlength="50" name="Concave_points_mean" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Symmetry_mean">Symmetry_mean:</label></td>
+            
+            <td><input id="Symmetry_mean" maxlength="50" name="Symmetry_mean" type="text" /></td>
+        </tr>
+        
+        <tr>
+            <td><label for="fractional_dimension_mean">FDM:</label></td>
+            
+            <td><input id="fractional_dimension_mean" maxlength="50" name="fractional_dimension_mean" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Radius_se">Radius_se:</label></td>
+            <td><input id="Radius_se" maxlength="50" name="Radius_se" type="text" /></td>
+        </tr>
+        
+         <tr>
+             <td><label for="texture_se">Texture_se:</label></td>
+             <td><input id="texture_se" maxlength="50" name="texture_se" type="text" /></td>
+         </tr>
+         
+        <tr>
+            <td><label for="Perimeter_se">Perimeter_se:</label></td>
+            
+            <td><input id="Perimeter_se" maxlength="50" name="Perimeter_se" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Area_se">Area_se:</label></td>
+            <td><input id="Area_se" maxlength="50" name="Area_se" type="text" /></td>
+            
+        </tr>
+        
+        <tr>
+            <td><label for="smoothness_se">Smoothness_se:</label></td>
+            <td><input id="smoothness_se" maxlength="50" name="smoothness_se" type="text" /></td>
+            
+        </tr>
+        
+        <tr>
+            <td><label for="Compactness_se">Compactness_se:</label></td>
+            <td><input id="Compactness_se" maxlength="50" name="Compactness_se" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Concavity_se">Concavity_se:</label></td>
+            <td><input id="Concavity_se" maxlength="50" name="Concavity_se" type="text" /></td>
+           
+        </tr>
+        <tr>
+            <td><label for="Concave points_se">Concave points_se:</label></td>
+            <td><input id="Concave points_se" maxlength="50" name="Concave_points_se" type="text" /></td>
+        </tr>
+        
+          <tr>
+              <td><label for="symmetry_se">Symmetry_se:</label></td>
+              <td><input id="symmetry_se" maxlength="50" name="symmetry_se" type="text" /></td>
+          </tr>
+          
+        <tr>
+            <td><label for="Fractal_dimension_se">Fractal_dimension_se:</label></td>
+            <td><input id="Fractal_dimension_se" maxlength="50" name="Fractal_dimension_se" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Radius_worst">Radius_worst:</label></td>
+            <td><input id="Radius_worst" maxlength="50" name="Radius_worst" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Texture_worst">Texture_worst:</label></td>
+            <td><input id="Texture_worst" maxlength="50" name="Texture_worst" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Perimeter_worst">Perimeter_worst:</label></td>
+            <td><input id="Perimeter_worst" maxlength="50" name="Perimeter_worst" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Area_worst">Area_worst:</label></td>
+            <td><input id="Area_worst" maxlength="50" name="Area_worst" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Smoothness_worst">Smoothness_worst:</label></td>
+            <td><input id="Smoothness_worst" maxlength="50" name="Smoothness_worst" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Compactness_worst">Compactness_worst:</label></td>
+            <td><input id="Compactness_worst" maxlength="50" name="Compactness_worst" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Concavity_worst">Concavity_worst:</label></td>
+            <td><input id="Concavity_worst" maxlength="50" name="Concavity_worst" type="text" /></td>
+        </tr>
+        
+        <tr>
+            <td><label for="Concave_points_worst">Concave_points_worst:</label></td>
+            <td><input id="Concave_points_worst" maxlength="50" name="Concave_points_worst" type="text" /></td>
+        </tr>
+        
+        <tr>
+            <td><label for="Symmetry_worst">Symmetry_worst:</label></td>
+            <td><input id="Symmetry_worst" maxlength="50" name="Symmetry_worst" type="text" /></td>
+        </tr>
+        <tr>
+            <td><label for="Fractal_dimension_worst">Fractal_dimension_worst:</label></td>
+            <td><input id="Fractal_dimension_worst" maxlength="50" name="Fractal_dimension_worst" type="text" /></td>
+        </tr>
+       
+
+        <tr>
+            <td align="right"><input name="Submit" type="Submit" value="prediction" /></td>
+        </tr>
+        
+    </tbody>
+</table>
+    </form>
+    
+    <br>
+    <hr class="hr">
+    
+    
+    <h2><mark class="internal"> Results: </mark></h2>
+
+        <center>
+           <p><b> Prediction: {{y}} </b></p>
+           <p><b> Predicted Index:{{z}} </b></p>
+           <p><b> Model Accuracy:{{a}} </b></p>
+           <p><b> Algorithm Used: {{u}} </b></p>
+        
+       </center>
+       
+      <br>
+  	<hr class="hr">
+
+  	<h2><mark class="internal">Interpretation:</mark> </h2>
+  	
+          	<center>
+              	<p><b> {{p}} </b></p>
+          	</center>
+      
+      <br>
+      <hr class="hr"> 
+      
+      <center>
+      	<p><b> Click on <mark>'About'</mark> Page to know more about <mark>disease and precautions!</mark> </b></p>
+      	<p><b>Click on <mark>'back arrow'</mark> to head to <mark>home</mark> page!</p></b>
+  	</center>
+           
+    
+    </body>
+</html>
+
